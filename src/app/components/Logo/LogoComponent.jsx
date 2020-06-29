@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     },
     name: {
         color: 'white',
-        fontSize: '2rem',
+        fontSize: '1.95rem',
         fontWeight: 100,
         opacity: 0.6
     },
@@ -32,7 +32,7 @@ export default function LogoComponent(props) {
                     [classes.selected]: selectedIndex === index
                 })}
             >
-                HEADER
+                DAN CARR
             </Typography>
         </Link>
     );

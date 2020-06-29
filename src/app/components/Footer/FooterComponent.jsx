@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         height: '75px'
@@ -20,7 +21,7 @@ export default function FooterComponent() {
             <Typography
                 className={classes.copyright}
                 variant="caption"
-            >{`Copyright © ${new Date().getFullYear()} [template]. All rights reserved.`}</Typography>
+            >{`Copyright © ${new Date().getFullYear()} Daniel Carr. All rights reserved.`}</Typography>
         </footer>
     );
 }
