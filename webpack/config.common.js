@@ -42,7 +42,7 @@ module.exports = {
             template: '../src/index.ejs',
             favicon: '../src/favicon.ico',
             filename: 'index.html',
-            title: 'UI Application Template'
+            title: 'Dan Carr | Staff Web Application Engineer'
         }),
         new CopyWebpackPlugin([
             { from: 'server.js', to: 'server.js' },
