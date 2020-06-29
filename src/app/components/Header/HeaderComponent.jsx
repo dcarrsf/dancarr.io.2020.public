@@ -4,7 +4,6 @@ import React from 'react';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
@@ -12,7 +11,7 @@ const useStyles = makeStyles(theme => ({
         height: '75px'
     }
 }));
-export default function AppViewComponent() {
+export default function HeaderComponent() {
     const classes = useStyles();
 
     return (

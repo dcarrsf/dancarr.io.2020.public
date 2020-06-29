@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import classNames from 'classnames';
@@ -28,6 +28,13 @@ const useStyles = makeStyles({
 export default function NavbarComponent(props) {
     const { navigate, routes, selectedIndex, showFirstRoute } = props;
     const classes = useStyles();
+    const location = useLocation();
+
+    const { pathname } = location;
+    if (pathname !== routes[selectedIndex].path) {
+        const currentPathIndex = routes.findIndex(item => item.path === pathname);
+        navigate(currentPathIndex);
+    }
 
     const maybeRenderButton = (route, index) => {
         if (index > 0 || showFirstRoute) {

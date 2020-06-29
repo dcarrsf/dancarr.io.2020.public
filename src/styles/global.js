@@ -30,10 +30,9 @@ export default theme => ({
         '#errorBoundryMessage': {
             marginTop: '10px',
             padding: '10px',
-            width: '100%',
+            borderRadius: '3px',
             display: 'flex',
             justifyContent: 'center',
-            borderRadius: '3px',
             backgroundColor: 'rgba(0,0,0,0.7)'
         }
     }

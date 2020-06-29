@@ -6,10 +6,9 @@ import ScrollView from '../ScrollView';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        flexGrow: 1,
         display: 'flex',
-        height: '100vh',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        height: '100vh'
     }
 }));
 export default function AppViewComponent(props) {
