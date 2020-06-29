@@ -1,20 +1,20 @@
 import { Route, Switch } from 'react-router-dom';
-import Explore from './Explore';
-import Main from './Main';
+import Code from './Code';
+import Home from './Home';
 import NotFound from './NotFound';
 import React from 'react';
-import Preview from './Preview';
+import Story from './Story';
 
 export default (
     <Switch>
         <Route exact path="/">
-            <Main />
+            <Home />
         </Route>
-        <Route path="/explore">
-            <Explore />
+        <Route path="/code">
+            <Code />
         </Route>
-        <Route path="/preview">
-            <Preview />
+        <Route path="/story">
+            <Story />
         </Route>
         <Route path="*">
             <NotFound />

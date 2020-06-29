@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     },
     button: {
         color: 'white',
-        fontSize: '2rem',
+        fontSize: '1.5rem',
         fontWeight: 100
     },
     selected: {

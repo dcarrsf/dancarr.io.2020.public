@@ -7,12 +7,12 @@ export const initialState = {
             path: '/'
         },
         {
-            name: 'Explore',
-            path: '/explore'
+            name: 'Code',
+            path: '/code'
         },
         {
-            name: 'Preview',
-            path: '/preview'
+            name: 'Story',
+            path: '/story'
         }
     ],
     selectedIndex: 0

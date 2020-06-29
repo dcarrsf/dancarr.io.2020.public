@@ -8,18 +8,20 @@ const useStyles = makeStyles({
         flex: '1 1 auto',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '0 5rem'
+        justifyContent: 'center'
+    },
+    title: {
+        fontSize: '6.5rem',
+        fontWeight: '100',
+        padding: 0
     }
 });
-export default function Mainomponent() {
+export default function CodeComponent() {
     const classes = useStyles();
     return (
         <PageView>
             <div className={classes.centerAlign}>
-                <div>
-                    <Typography variant="h1">TEMPLATE</Typography>
-                </div>
+                <Typography className={classes.title}>STORY</Typography>
             </div>
         </PageView>
     );
