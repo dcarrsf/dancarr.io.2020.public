@@ -1,7 +1,7 @@
 {
-  "name": "app-ui-template",
+  "name": "dancarr.io.2020.public",
   "version": "1.0.0",
-  "description": "application user interface template",
+  "description": "Landing page and personal domain.",
   "scripts": {
     "build": "npm run lint && npm run build-webpack",
     "build-start": "npm run build && npm run start",
@@ -81,16 +81,17 @@
     "lint-staged": "10.0.7",
     "prettier": "1.19.1",
     "rimraf": "3.0.2",
+    "url-loader": "4.1.0",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.10.3",
     "webpack-merge": "4.2.2"
   },
   "repository": {
-    "url": "git@github.com/dcarrsf/app-ui-template.git",
+    "url": "git@github.com/dcarrsf/dancarr.io.2020.public.git",
     "type": "git"
   },
-  "homepage": "https://github.com/dcarrsf/app-ui-template",
+  "homepage": "https://github.com/dcarrsf/dancarr.io.2020.public",
   "license": "MIT",
   "husky": {
     "hooks": {
