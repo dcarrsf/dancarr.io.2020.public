@@ -4,8 +4,11 @@ import React from 'react';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        height: 'calc(100vh - 75px)',
-        overflowX: 'scroll'
+        height: 'calc(100vh - 125px)',
+        overflowX: 'scroll',
+        '@media (min-width: 768px)': {
+            height: 'calc(100vh - 75px)'
+        }
     }
 }));
 export default function ScrollViewComponent(props) {

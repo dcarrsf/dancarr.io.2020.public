@@ -36,15 +36,23 @@ const useStyles = makeStyles({
     },
     title: {
         margin: '2px 0',
-        fontSize: '4rem',
-        fontWeight: '100'
+        fontSize: '2.5rem',
+        fontWeight: '100',
+        '@media (min-width: 768px)': {
+            fontSize: '4rem'
+        }
     },
     year: {
         position: 'absolute',
         right: '-45px',
-        bottom: '-43px',
-        fontSize: '4rem',
-        fontWeight: '100'
+        bottom: '-26px',
+        fontSize: '2.5rem',
+        fontWeight: '100',
+        '@media (min-width: 768px)': {
+            right: '-45px',
+            bottom: '-43px',
+            fontSize: '4rem'
+        }
     },
     body: {
         padding: '0 35px',
@@ -62,7 +70,11 @@ const useStyles = makeStyles({
         fontWeight: '100'
     },
     sectionBody: {
-        marginBottom: '6px'
+        fontSize: '0.85rem',
+        marginBottom: '6px',
+        '@media (min-width: 768px)': {
+            fontSize: '1rem'
+        }
     },
     project: {
         width: '100%',
@@ -82,7 +94,11 @@ const useStyles = makeStyles({
         color: 'orange'
     },
     projectBody: {
-        color: 'white'
+        fontSize: '0.85rem',
+        color: 'white',
+        '@media (min-width: 768px)': {
+            fontSize: '1rem'
+        }
     },
     projectKeywords: {
         color: 'lightgray'

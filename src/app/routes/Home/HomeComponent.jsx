@@ -11,18 +11,29 @@ const useStyles = makeStyles({
         backgroundColor: 'rgba(0,0,0,0.35)'
     },
     textGroup: {
-        padding: '100px 150px'
+        padding: '150px 25px',
+        '@media (min-width: 768px)': {
+            padding: '100px 150px'
+        }
     },
     title: {
-        fontSize: '6rem',
         fontWeight: '100',
-        lineHeight: '5rem'
+        fontSize: '3rem',
+        lineHeight: '2.45rem',
+        '@media (min-width: 768px)': {
+            fontSize: '6rem',
+            lineHeight: '5rem'
+        }
     },
     subtitle: {
         color: 'lightgray',
-        fontSize: '1.5rem',
+        fontSize: '1.25rem',
         fontWeight: '300',
-        marginLeft: '10px'
+        marginLeft: '4px',
+        '@media (min-width: 768px)': {
+            marginLeft: '10px',
+            fontSize: '1.5rem'
+        }
     },
     section: {
         height: '150px',

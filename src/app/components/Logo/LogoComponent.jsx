@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     link: {
+        marginLeft: '6px',
         textDecoration: 'none'
     },
     name: {

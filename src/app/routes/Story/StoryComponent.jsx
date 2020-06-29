@@ -23,15 +23,23 @@ const useStyles = makeStyles({
     },
     title: {
         margin: '2px 0',
-        fontSize: '4rem',
-        fontWeight: '100'
+        fontSize: '2.5rem',
+        fontWeight: '100',
+        '@media (min-width: 768px)': {
+            fontSize: '4rem'
+        }
     },
     year: {
         position: 'absolute',
         right: '-45px',
-        bottom: '-43px',
-        fontSize: '4rem',
-        fontWeight: '100'
+        bottom: '-26px',
+        fontSize: '2.5rem',
+        fontWeight: '100',
+        '@media (min-width: 768px)': {
+            right: '-45px',
+            bottom: '-43px',
+            fontSize: '4rem'
+        }
     },
     email: {
         marginTop: '-2px',
@@ -40,6 +48,7 @@ const useStyles = makeStyles({
         fontSize: '0.8rem'
     },
     status: {
+        margin: '6px 0',
         color: 'lightgray',
         display: 'flex',
         flexDirection: 'column',
@@ -54,7 +63,8 @@ const useStyles = makeStyles({
     sectionTitle: {
         color: 'orange',
         fontSize: '1.8rem',
-        fontWeight: '100'
+        fontWeight: '100',
+        lineHeight: '1.75rem'
     },
     sectionSubtitle: {
         color: 'orange',
@@ -62,7 +72,11 @@ const useStyles = makeStyles({
         fontWeight: '400'
     },
     sectionBody: {
-        marginBottom: '6px'
+        fontSize: '0.85rem',
+        marginBottom: '6px',
+        '@media (min-width: 768px)': {
+            fontSize: '1rem'
+        }
     },
     section1: {
         backgroundColor: 'rgba(0,0,0,0.35)'

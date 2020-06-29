@@ -16,10 +16,30 @@ const useStyles = makeStyles({
     link: {
         textDecoration: 'none'
     },
+    buttonGroup: {
+        width: '100%',
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        backgroundColor: '#222',
+        display: 'flex',
+        justifyContent: 'center',
+        '@media (min-width: 768px)': {
+            width: 'auto',
+            display: 'block',
+            position: 'relative',
+            justifyContent: 'space-between',
+            backgroundColor: 'rgba(0,0,0,0)'
+        }
+    },
     button: {
         color: 'white',
         fontSize: '1.5rem',
-        fontWeight: 100
+        fontWeight: 100,
+        width: '125px',
+        '@media (min-width: 768px)': {
+            width: 'auto'
+        }
     },
     selected: {
         color: 'orange'
@@ -58,7 +78,7 @@ export default function NavbarComponent(props) {
     return (
         <div className={classes.root}>
             <Logo />
-            <div>{routes.map((route, i) => maybeRenderButton(route, i))}</div>
+            <div className={classes.buttonGroup}>{routes.map((route, i) => maybeRenderButton(route, i))}</div>
         </div>
     );
 }
