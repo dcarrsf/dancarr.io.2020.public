@@ -1,0 +1,57 @@
+[
+    {
+        "name": "app-compose-template",
+        "description": "Docker Compose template used to run mulitple servers as a monolith during local development.",
+        "keywords": [
+            "Docker",
+            "NGINX",
+            "MongoDB",
+            "Redis",
+            "Elasticsearch",
+            "Kibana"
+        ],
+        "github": "https://github.com/dcarrsf/app-compose-template",
+        "icon": "BorderColor"
+    },
+    {
+        "name": "app-service-template",
+        "description": "Backend API server template built with Node, Koa, and Babel.",
+        "keywords": [
+            "Node",
+            "Koa",
+            "MongoDB",
+            "Redis",
+            "Elasticsearch",
+            "Kibana"
+        ],
+        "github": "https://github.com/dcarrsf/app-service-template",
+        "icon": "CloudQueue"
+    },
+    {
+        "name": "app-ui-template",
+        "description": "Web user interface template using React hooks, Webpack 4, and the latest upgrades to dependencies.",
+        "keywords": [
+            "React",
+            "Redux",
+            "JSS",
+            "Material-UI",
+            "Webpack"
+        ],
+        "github": "https://github.com/dcarrsf/app-ui-template",
+        "icon": "Collections"
+    },
+    {
+        "name": "app-ui-template-electron",
+        "description": "Desktop user interface template developed as a variation of the web UI template.",
+        "keywords": [
+            "Electron",
+            "React",
+            "Redux",
+            "JSS",
+            "Material-UI",
+            "Webpack"
+        ],
+        "github": "https://github.com/dcarrsf/app-ui-template-electron",
+        "icon": "DesktopMac"
+    }
+]

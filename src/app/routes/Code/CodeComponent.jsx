@@ -1,114 +1,180 @@
 import { makeStyles } from '@material-ui/core/styles';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
+import CloudQueueIcon from '@material-ui/icons/CloudQueue';
+import CollectionsIcon from '@material-ui/icons/Collections';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import DesktopMacIcon from '@material-ui/icons/DesktopMac';
 import PageView from '../../components/PageView';
+import projects from './projects.json';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
+
+const iconMap = {
+    BorderColor: BorderColorIcon,
+    CloudQueue: CloudQueueIcon,
+    Collections: CollectionsIcon,
+    DesktopMac: DesktopMacIcon,
+    GitHub: GitHubIcon
+};
 
 const useStyles = makeStyles({
-    centerAlign: {
-        display: 'flex',
-        alignItems: 'center'
-    },
-    titleContainer: {
-        width: '300px',
-        padding: '50px',
-        display: 'flex',
-        flexDirection: 'column'
-    },
-    title: {
-        fontSize: '6.5rem',
-        fontWeight: '100',
-        padding: 0
-    },
-    codeContainer: {
-        maxWidth: '500px',
-        padding: '50px',
-        flex: '1 1 auto',
+    root: {
         display: 'flex',
         flexDirection: 'column',
-        borderRadius: '6px',
-        backgroundColor: 'rgba(0,0,0,0.3)'
-        // background: `repeating-linear-gradient(
-        //     45deg,
-        //     rgba(0,0,0,0),
-        //     rgba(0,0,0,0) 2px,
-        //     rgba(0,0,0,0.3) 4px,
-        //     rgba(0,0,0,0.3) 6px
-        // )`
+        alignItems: 'center',
+        paddingBottom: '20px',
+        backgroundColor: 'rgba(0,0,0,0.35)'
     },
-    projectGroup: {
-        padding: '20px 0'
+    header: {
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center'
     },
-    groupTitle: {
-        color: 'orange'
+    textGroup: {
+        position: 'relative'
+    },
+    title: {
+        margin: '2px 0',
+        fontSize: '4rem',
+        fontWeight: '100'
     },
     year: {
-        marginBottom: '10px'
+        position: 'absolute',
+        right: '-45px',
+        bottom: '-43px',
+        fontSize: '4rem',
+        fontWeight: '100'
     },
-    divider: {
-        backgroundColor: 'lightgray'
+    body: {
+        padding: '0 35px',
+        marginTop: '40px',
+        maxWidth: '750px'
+    },
+    sectionTitle: {
+        color: 'orange',
+        fontSize: '1.8rem',
+        fontWeight: '100'
+    },
+    sectionSubtitle: {
+        color: 'orange',
+        fontSize: '1.5rem',
+        fontWeight: '100'
+    },
+    sectionBody: {
+        marginBottom: '6px'
+    },
+    project: {
+        width: '100%',
+        padding: '10px 0px',
+        display: 'flex',
+        textDecoration: 'none',
+        borderRadius: '6px',
+        '&:hover': {
+            backgroundColor: 'rgba(0,0,0,0.25)'
+        }
+    },
+    projectIcon: {
+        padding: '10px 20px',
+        color: 'white'
+    },
+    projectTitle: {
+        color: 'orange'
+    },
+    projectBody: {
+        color: 'white'
+    },
+    projectKeywords: {
+        color: 'lightgray'
+    },
+    highlight: {
+        color: 'orange'
+    },
+    github: {
+        padding: '0 35px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        paddingBottom: '20px',
+        backgroundColor: 'rgba(0,0,0,0.25)'
+    },
+    githubBody: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        margin: '20px 0',
+        maxWidth: '750px',
+        width: '100%'
     }
 });
 export default function CodeComponent() {
     const classes = useStyles();
+
+    function renderProject(project, index) {
+        const { name, description, keywords, github, icon } = project;
+        const Icon = iconMap[icon];
+        return (
+            <a key={index} className={classes.project} href={github}>
+                <Icon className={classes.projectIcon} />
+                <div>
+                    <Typography variant="h6" className={classes.projectTitle}>
+                        {name}
+                    </Typography>
+                    <Typography variant="body1" className={classes.projectBody}>
+                        {description}
+                    </Typography>
+                    <Typography variant="caption" className={classes.projectKeywords}>
+                        {`[${keywords.join(', ')}]`}
+                    </Typography>
+                </div>
+            </a>
+        );
+    }
+
     return (
         <PageView>
-            <div className={classes.centerAlign}>
-                <div className={classes.titleContainer}>
-                    <Typography className={classes.title}>CODE</Typography>
+            <div className={classes.root}>
+                <div className={classes.header}>
+                    <div className={classes.textGroup}>
+                        <Typography variant="h2" className={classes.title}>
+                            PROJECTS
+                        </Typography>
+                        <Typography variant="h2" className={classes.year}>
+                            2020
+                        </Typography>
+                    </div>
                 </div>
-                <div className={classes.codeContainer}>
-                    <div className={classes.year}>
-                        <Typography variant="body">2020</Typography>
-                    </div>
-                    <Divider className={classes.divider} />
-                    <div className={classes.projectGroup}>
-                        <Typography variant="body" className={classes.groupTitle}>
-                            app-ui-template
-                        </Typography>
-                        <Typography variant="body2">
-                            Update user interface template using React hooks, Webpack 4, and the latest upgrades to
-                            dependencies.
-                        </Typography>
-                    </div>
-                    <div className={classes.projectGroup}>
-                        <Typography variant="body" className={classes.groupTitle}>
-                            app-service-template
-                        </Typography>
-                        <Typography variant="body2">
-                            Backend API server template built with Node, Koa, and Babel.
-                        </Typography>
-                    </div>
-                    <div className={classes.projectGroup}>
-                        <Typography variant="body" className={classes.groupTitle}>
-                            app-compose-template
-                        </Typography>
-                        <Typography variant="body2">
-                            Simple Docker Compose template used to run mulitple servers as a monolith. Uses NGINX as a
-                            reverse proxy for local development.
-                        </Typography>
-                    </div>
-                    <div className={classes.projectGroup}>
-                        <Typography variant="body" className={classes.groupTitle}>
-                            app-electron-template
-                        </Typography>
-                        <Typography variant="body2">
-                            Simple browser replacement uses Electron to create a local application wrapper.
-                        </Typography>
-                    </div>
-                    <div className={classes.year}>
-                        <Typography variant="body">2015-present</Typography>
-                    </div>
-                    <Divider className={classes.divider} />
-                    <div className={classes.projectGroup}>
-                        <Typography variant="body" className={classes.groupTitle}>
-                            github.com/dcarrsf
-                        </Typography>
-                        <Typography variant="body2">
-                            Check out the dcarrsf repos on GitHub for a mixture of current projects, studies from
-                            explorations in JavaScript, and archived open-source ActionScript projects.
-                        </Typography>
-                    </div>
+                <div className={classes.body}>
+                    <Typography variant="h6" className={classes.sectionTitle}>
+                        Starter Templates:
+                    </Typography>
+                    <Typography variant="body1" className={classes.sectionBody}>
+                        These templates can be used to start everything from web or desktop UI’s, to full fledged
+                        microservices composed of multiple containers, and any combination between.
+                    </Typography>
+                    {projects && projects.map((project, i) => renderProject(project, i))}
+                </div>
+            </div>
+            <div className={classes.github}>
+                <div className={classes.githubBody}>
+                    <Typography variant="h6" className={classes.sectionTitle}>
+                        GitHub:
+                    </Typography>
+                    <Typography variant="body1" className={classes.sectionBody}>
+                        Check out more templates, projects, and archived code spanning 2015 - present, at the
+                        <span className={classes.highlight}> dancarrsf </span>GitHub page.
+                    </Typography>
+                    {renderProject(
+                        {
+                            name: 'github.com/dcarrsf',
+                            description:
+                                'Public and private repositories mostly consisting of templates and prototype work.',
+                            keywords: ['Docker', 'JavaScript', 'Electron', 'Webpack', 'Node'],
+                            github: 'https://github.com/dcarrsf',
+                            icon: 'GitHub'
+                        },
+                        10
+                    )}
                 </div>
             </div>
         </PageView>
