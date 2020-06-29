@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     header: {
         width: '100%',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.2)'
     },
     textGroup: {
         position: 'relative'
@@ -39,8 +40,9 @@ const useStyles = makeStyles({
         fontSize: '0.8rem'
     },
     status: {
-        color: 'orange',
+        color: 'lightgray',
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'space-between',
         marginBottom: '5px'
     },

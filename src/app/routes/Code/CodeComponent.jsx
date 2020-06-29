@@ -28,7 +28,8 @@ const useStyles = makeStyles({
     header: {
         width: '100%',
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.2)'
     },
     textGroup: {
         position: 'relative'
