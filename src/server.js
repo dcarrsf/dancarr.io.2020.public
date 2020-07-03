@@ -1,12 +1,15 @@
 const Koa = require('koa');
 const logger = require('koa-logger');
+const Router = require('koa-router');
 const send = require('koa-send');
 
 const app = new Koa();
+const router = new Router();
 const port = 8888;
 
 app.use(logger());
-app.use(async (ctx, next) => {
+
+router.get('/(.*)', async (ctx, next) => {
     let error = null;
     try {
         await send(ctx, '/' === ctx.path ? '/index.html' : ctx.path, { root: __dirname });
