@@ -4,7 +4,6 @@
   "description": "Landing page and personal domain.",
   "scripts": {
     "build": "npm run lint && npm run build-webpack",
-    "build-start": "npm run build && npm run start",
     "build-webpack": "webpack --config ./webpack --env production",
     "clean": "rimraf build",
     "dev": "webpack-dev-server --config ./webpack --env development",
