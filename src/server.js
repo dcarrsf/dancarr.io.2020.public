@@ -7,8 +7,6 @@ const app = new Koa();
 const router = new Router();
 const port = 8888;
 
-app.use(logger());
-
 router.get('/(.*)', async (ctx, next) => {
     let error = null;
     try {
@@ -20,6 +18,9 @@ router.get('/(.*)', async (ctx, next) => {
         // todo: error handling goes here...
     }
 });
+
+app.use(logger());
+app.use(router.routes());
 
 // Start server on 8888
 app.listen(port);
