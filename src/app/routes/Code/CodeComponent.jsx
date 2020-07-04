@@ -131,7 +131,7 @@ export default function CodeComponent() {
         const { name, description, keywords, github, icon } = project;
         const Icon = iconMap[icon];
         return (
-            <a key={index} className={classes.project} href={github}>
+            <a key={index} className={classes.project} href={github} target="_blank" rel="noopener noreferrer">
                 <Icon className={classes.projectIcon} />
                 <div>
                     <Typography variant="h6" className={classes.projectTitle}>
@@ -166,8 +166,8 @@ export default function CodeComponent() {
                         Starter Templates:
                     </Typography>
                     <Typography variant="body1" className={classes.sectionBody}>
-                        These templates can be used to start everything from web or desktop UI’s, to full fledged
-                        microservices composed of multiple containers, and any combination between.
+                        I'm kicking off 2020 with a set of starter templates used to build simple web and dektop UI's,
+                        or full-fledged microservices composed of multiple containers, and any combination between.
                     </Typography>
                     {projects && projects.map((project, i) => renderProject(project, i))}
                 </div>
@@ -178,7 +178,7 @@ export default function CodeComponent() {
                         GitHub:
                     </Typography>
                     <Typography variant="body1" className={classes.sectionBody}>
-                        Check out more templates, projects, and archived code spanning 2015 - present, at the
+                        Check out more templates and archived projects from 2015 to present, at the
                         <span className={classes.highlight}> dancarrsf </span>GitHub page.
                     </Typography>
                     {renderProject(
@@ -186,7 +186,7 @@ export default function CodeComponent() {
                             name: 'github.com/dcarrsf',
                             description:
                                 'Public and private repositories mostly consisting of templates and prototype work.',
-                            keywords: ['Docker', 'JavaScript', 'Electron', 'Webpack', 'Node'],
+                            keywords: ['Docker', 'Node', 'JavaScript', 'Webpack', 'Electron', 'HTML5', 'ActionScript'],
                             github: 'https://github.com/dcarrsf',
                             icon: 'GitHub'
                         },

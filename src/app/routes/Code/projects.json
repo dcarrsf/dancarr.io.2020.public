@@ -1,7 +1,7 @@
 [
     {
         "name": "app-compose-template",
-        "description": "Docker Compose template used to run mulitple servers as a monolith during local development.",
+        "description": "Docker Compose template used to run servers and data stores as a monolith during local development.",
         "keywords": [
             "Docker",
             "NGINX",
@@ -14,7 +14,7 @@
         "icon": "BorderColor"
     },
     {
-        "name": "app-service-template",
+        "name": "app-api-template",
         "description": "Backend API server template built with Node, Koa, and Babel.",
         "keywords": [
             "Node",
@@ -24,12 +24,12 @@
             "Elasticsearch",
             "Kibana"
         ],
-        "github": "https://github.com/dcarrsf/app-service-template",
+        "github": "https://github.com/dcarrsf/app-api-template",
         "icon": "CloudQueue"
     },
     {
         "name": "app-ui-template",
-        "description": "Web user interface template using React hooks, Webpack 4, and the latest upgrades to dependencies.",
+        "description": "Web user interface template built with React hooks, Redux, and Webpack 4.",
         "keywords": [
             "React",
             "Redux",

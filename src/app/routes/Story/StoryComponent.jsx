@@ -60,6 +60,11 @@ const useStyles = makeStyles({
         marginTop: '40px',
         maxWidth: '750px'
     },
+    body2: {
+        padding: '0 35px',
+        marginTop: '25px',
+        maxWidth: '750px'
+    },
     sectionTitle: {
         color: 'orange',
         fontSize: '1.8rem',
@@ -67,9 +72,9 @@ const useStyles = makeStyles({
         lineHeight: '1.75rem'
     },
     sectionSubtitle: {
+        marginTop: '20px',
         color: 'orange',
-        fontSize: '1rem',
-        fontWeight: '400'
+        fontSize: '1rem'
     },
     sectionBody: {
         fontSize: '0.85rem',
@@ -98,9 +103,6 @@ export default function StoryComponent() {
                         <Typography variant="h2" className={classes.title}>
                             STORY
                         </Typography>
-                        <Typography variant="h2" className={classes.year}>
-                            2020
-                        </Typography>
                     </div>
                 </div>
                 <div className={classes.body}>
@@ -113,15 +115,14 @@ export default function StoryComponent() {
                     </div>
                     <Typography variant="body1" className={classes.sectionBody}>
                         Staff engineer at Studio Technology developing full-stack software for internal Studio
-                        applications, providing next generation solutions in inventory and asset management systems.
-                        Joined the Asset Management team on contract, then converted to full time project hire while
-                        continuing microservice platform work, along with feature development work in the Studio's
+                        applications. Joined the Asset Management team in 2017, converting to full time project hire
+                        while continuing microservice platform work, along with feature development work on the Studio's
                         Wonderland application.
                     </Typography>
                 </div>
             </div>
             <div className={classNames(classes.root, classes.section2)}>
-                <div className={classes.body}>
+                <div className={classes.body2}>
                     <Typography variant="h6" className={classes.sectionTitle}>
                         Codesmith
                     </Typography>
@@ -138,25 +139,24 @@ export default function StoryComponent() {
                 </div>
             </div>
             <div className={classNames(classes.root, classes.section3)}>
-                <div className={classes.body}>
+                <div className={classes.body2}>
                     <Typography variant="h6" className={classes.sectionTitle}>
                         Freelance
                     </Typography>
                     <div className={classes.status}>
                         <Typography variant="body2">Senior Software Engineer | Author | Trainer</Typography>
-                        <Typography variant="body2">2006 - 2016</Typography>
                     </div>
                     <Typography variant="body1" className={classes.sectionBody}>
                         Sole proprietor providing software development and training services to corporate clients,
-                        including long-running relationships with Adobe, Kayak, Autodesk, and Johnson & Johnson.
+                        including long-running relationships with Adobe, Kayak, Autodesk, and Johnson & Johnson, PRD.
                     </Typography>
                     <Typography variant="h6" className={classes.sectionSubtitle}>
                         Publications & Workshops
                     </Typography>
                     <Typography variant="body1" className={classes.sectionBody}>
-                        Authored 100+ web development articles for Pluralsight, Adobe Create Magazine, Adobe Developer
-                        Center, and SitePoint. Led 50+ workshops at Adobe MAX, eLearning Guild, and the eLearning
-                        Developers Conference.
+                        Authored 100+ web development training cources and articles for Pluralsight, Adobe Create
+                        Magazine, Adobe Developer Center, and SitePoint. Led 50+ workshops at Adobe MAX, eLearning
+                        Guild, and the eLearning Developers Conference.
                     </Typography>
                 </div>
                 <div className={classes.body} style={{ display: 'flex', alignItems: 'center' }}>
