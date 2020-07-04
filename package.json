@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Landing page and personal domain.",
   "scripts": {
-    "build": "npm run lint && npm run build-webpack",
-    "build-webpack": "webpack --config ./webpack --env production",
+    "build": "webpack --config ./webpack --env production --progress --colors --optimize-minimize",
     "clean": "rimraf build",
     "dev": "webpack-dev-server --config ./webpack --env development",
     "lint": "eslint --fix src/**/*.jsx",
